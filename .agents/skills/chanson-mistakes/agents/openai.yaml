@@ -1,0 +1,3 @@
+interface:
+  display_name: "Chanson Mistakes"
+  short_description: "Turn raw wrong questions into reviewable mistake notes"

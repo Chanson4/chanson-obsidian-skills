@@ -1,0 +1,3 @@
+interface:
+  display_name: "Chanson Practice"
+  short_description: "Generate exam-style practice from notes, mistakes, and topics"

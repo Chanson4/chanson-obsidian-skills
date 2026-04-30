@@ -82,7 +82,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 典型请求：
 
 ```text
-按这个目录创建数学笔记目录，格式跟计组笔记一样。
+按这个目录创建 xxx 笔记目录，格式跟已有笔记一样。
 ```
 
 #### chanson-notes
@@ -97,7 +97,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 - 为什么是这样
 - 推理链、例子、类比、计算过程
 - 易错点与纠偏
-- 考研或考试中的常见考法
+- 测验、考试或自我检测中的常见考法
 - 复习问题
 
 适合场景：
@@ -110,7 +110,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 典型请求：
 
 ```text
-这是我在计组3-6节学习中与AI的对话记录，请精炼知识点，但要保留关键过程，避免只存在知识点没有解释的情况，将精炼后的笔记存入对应章节的计组笔记。
+这是我在学习 xxx 第 x.x 节时与 AI 的对话记录，请精炼知识点，但要保留关键过程，避免只存在知识点没有解释的情况，将精炼后的笔记存入对应章节的 xxx 笔记。
 ```
 
 #### chanson-mistakes
@@ -134,14 +134,14 @@ obsidian-skills 负责 Obsidian 格式与写入
 适合场景：
 
 - 把截图题、错题讨论、原始题干加入错题本。
-- 维护考研数学、408、英语等科目的错题复盘。
+- 维护任意学科、课程或训练主题的错题复盘。
 - 从错题中提炼下一轮复习优先级。
 - 为 `chanson-practice` 提供针对性出题依据。
 
 典型请求：
 
 ```text
-把这几题加入计组错题，章节为3.6。
+把这几题加入 xxx 错题，章节为 x.x。
 ```
 
 #### chanson-practice
@@ -164,13 +164,13 @@ obsidian-skills 负责 Obsidian 格式与写入
 - 基础：概念定义、直接判断、简单应用。
 - 中等：一到两步推理，标准考试题。
 - 偏难：多步推理、陷阱识别、知识点组合。
-- 真题难度：贴近考研真题风格和难度。
+- 真题难度：贴近目标考试、测验或训练材料的题目风格和难度。
 - 拔高：用于强化迁移能力的提高题。
 
 典型请求：
 
 ```text
-根据计组3.5的错题和笔记，生成10道中等难度选择题，带答案和解析。
+根据 xxx 第 x.x 节的错题和笔记，生成 10 道中等难度选择题，带答案和解析。
 ```
 
 ### 推荐工作流
@@ -228,7 +228,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 
 - 使用 Obsidian 做长期学习管理的人。
 - 使用 Codex 辅助整理笔记、错题和练习题的人。
-- 备考考研、408、数学、英语或其他需要长期复盘的学习者。
+- 正在学习任意课程、技能、考试内容或长期训练主题的学习者。
 - 希望把 AI 对话转化为稳定知识资产的人。
 
 ---
@@ -310,7 +310,7 @@ Safety behavior:
 Example request:
 
 ```text
-Create a math note directory using this structure, and keep the format consistent with my computer organization notes.
+Create an xxx note directory using this structure, and keep the format consistent with my existing notes.
 ```
 
 #### chanson-notes
@@ -325,7 +325,7 @@ It preserves the learner's original questions because those questions reveal the
 - why the conclusion is true
 - reasoning chains, examples, analogies, and calculations
 - misconceptions and corrections
-- exam-facing points
+- test-facing, assessment-facing, or self-check points
 - review questions
 
 Best for:
@@ -338,7 +338,7 @@ Best for:
 Example request:
 
 ```text
-This is my AI dialogue while studying Chapter 3.6 of Computer Organization. Please refine the knowledge points, preserve the key reasoning process, avoid leaving only bare concepts, and write the refined notes into the corresponding chapter note.
+This is my AI dialogue while studying xxx section x.x. Please refine the knowledge points, preserve the key reasoning process, avoid leaving only bare concepts, and write the refined notes into the corresponding xxx chapter note.
 ```
 
 #### chanson-mistakes
@@ -362,14 +362,14 @@ It treats mistakes as evidence of knowledge gaps, misconceptions, or failed reco
 Best for:
 
 - Adding screenshot questions or raw wrong questions to a mistake notebook.
-- Maintaining mistake reviews for math, CS408, English, or other exam subjects.
+- Maintaining mistake reviews for any subject, course, skill area, or training topic.
 - Extracting review priorities from repeated mistakes.
 - Providing source material for `chanson-practice`.
 
 Example request:
 
 ```text
-Add these questions to my Computer Organization mistake notebook, chapter 3.6.
+Add these questions to my xxx mistake notebook, chapter x.x.
 ```
 
 #### chanson-practice
@@ -390,15 +390,15 @@ Practice questions should not be random. They should come from the user's actual
 Difficulty levels:
 
 - Basic: definitions, direct checks, simple applications.
-- Medium: one or two reasoning steps, standard exam-style questions.
+- Medium: one or two reasoning steps, standard assessment-style questions.
 - Hard: multi-step reasoning, traps, combined knowledge points.
-- Past-exam level: close to postgraduate entrance exam style and difficulty.
+- Past-paper level: close to the style and difficulty of the user's target exam, assessment, or training material.
 - Advanced: transfer questions for stronger mastery.
 
 Example request:
 
 ```text
-Based on my Chapter 3.5 notes and mistake notebook, generate 10 medium-difficulty multiple-choice questions with answers and explanations.
+Based on my xxx section x.x notes and mistake notebook, generate 10 medium-difficulty multiple-choice questions with answers and explanations.
 ```
 
 ### Recommended Workflow
@@ -456,6 +456,5 @@ Let obsidian-skills write the practice set into the practice folder
 
 - Learners who maintain long-term study systems in Obsidian.
 - Codex users who want structured notes, mistake notebooks, and practice sets.
-- Students preparing for postgraduate entrance exams, CS408, math, English, or similar long-cycle exams.
+- Learners preparing for any long-cycle course, assessment, exam, certification, or skill-training goal.
 - Anyone who wants to turn AI learning conversations into stable knowledge assets.
-

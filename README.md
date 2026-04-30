@@ -7,7 +7,7 @@
 
 ## 中文说明
 
-`chanson-obsidian-skills` 是一组面向学习复盘、Obsidian 知识库和 Codex 工作流的技能集合。它的目标不是简单总结聊天记录，而是把学习过程中的提问、困惑、错因、推理过程和复习价值沉淀成可长期维护的学习材料。
+`chanson-obsidian-skills` 是一组给 Obsidian 学习仓库使用的 agent skills，适用于 Codex、Claude Code 以及其他支持 agent skills 的智能体环境。它面向学习复盘、知识库维护和长期训练工作流，目标不是简单总结聊天记录，而是把学习过程中的提问、困惑、错因、推理过程和复习价值沉淀成可长期维护的学习材料。
 
 本仓库包含 4 个相互独立但可以组合使用的 skills：
 
@@ -44,7 +44,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 
 ### 安装方式
 
-将本仓库中的 `.agents/skills` 目录复制到你的 Codex 项目或本地 skills 目录中。
+将本仓库中的 `.agents/skills` 目录复制到你的 agent 项目或本地 skills 目录中。
 
 项目结构：
 
@@ -79,12 +79,6 @@ obsidian-skills 负责 Obsidian 格式与写入
 - 默认不覆盖已有文件。
 - 对新建 Markdown 文件只写入基础标题和占位结构。
 
-典型请求：
-
-```text
-按这个目录创建 xxx 笔记目录，格式跟已有笔记一样。
-```
-
 #### chanson-notes
 
 用于把 AI 学习对话精炼成高质量学习笔记草稿。
@@ -102,16 +96,10 @@ obsidian-skills 负责 Obsidian 格式与写入
 
 适合场景：
 
-- 将 ChatGPT、Codex、Claude 等学习对话整理为笔记。
+- 将 ChatGPT、Codex、Claude Code 或其他 agent / AI 对话整理为笔记。
 - 精炼章节学习记录。
 - 保留关键例子和理解过程，而不是只留下概念定义。
 - 生成可交给 `obsidian-skills` 写入 vault 的笔记草稿。
-
-典型请求：
-
-```text
-这是我在学习 xxx 第 x.x 节时与 AI 的对话记录，请精炼知识点，但要保留关键过程，避免只存在知识点没有解释的情况，将精炼后的笔记存入对应章节的 xxx 笔记。
-```
 
 #### chanson-mistakes
 
@@ -138,12 +126,6 @@ obsidian-skills 负责 Obsidian 格式与写入
 - 从错题中提炼下一轮复习优先级。
 - 为 `chanson-practice` 提供针对性出题依据。
 
-典型请求：
-
-```text
-把这几题加入 xxx 错题，章节为 x.x。
-```
-
 #### chanson-practice
 
 用于从笔记、错题、薄弱点或指定章节生成针对性练习题。
@@ -166,12 +148,6 @@ obsidian-skills 负责 Obsidian 格式与写入
 - 偏难：多步推理、陷阱识别、知识点组合。
 - 真题难度：贴近目标考试、测验或训练材料的题目风格和难度。
 - 拔高：用于强化迁移能力的提高题。
-
-典型请求：
-
-```text
-根据 xxx 第 x.x 节的错题和笔记，生成 10 道中等难度选择题，带答案和解析。
-```
 
 ### 推荐工作流
 
@@ -227,7 +203,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 ### 适合人群
 
 - 使用 Obsidian 做长期学习管理的人。
-- 使用 Codex 辅助整理笔记、错题和练习题的人。
+- 使用 Codex、Claude Code 或其他 agent 辅助整理笔记、错题和练习题的人。
 - 正在学习任意课程、技能、考试内容或长期训练主题的学习者。
 - 希望把 AI 对话转化为稳定知识资产的人。
 
@@ -235,7 +211,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 
 ## English
 
-`chanson-obsidian-skills` is a learning-focused skill set for Codex, Obsidian vaults, study notes, mistake reviews, and targeted practice. It is designed to turn real learning conversations, confusion, wrong answers, and reasoning paths into durable study materials.
+`chanson-obsidian-skills` is a set of agent skills for Obsidian-based learning vaults. It is designed for Codex, Claude Code, and other agent environments that support agent skills. It helps maintain study notes, mistake reviews, and targeted practice by turning real learning conversations, confusion, wrong answers, and reasoning paths into durable study materials.
 
 This repository contains 4 independent skills that can also work together:
 
@@ -272,7 +248,7 @@ If `obsidian-skills` is not available, Chanson can still produce clean Markdown 
 
 ### Installation
 
-Copy the `.agents/skills` folder from this repository into your Codex project or local skills directory.
+Copy the `.agents/skills` folder from this repository into your agent project or local skills directory.
 
 Repository layout:
 
@@ -307,12 +283,6 @@ Safety behavior:
 - Does not overwrite existing files by default.
 - Writes only basic titles and placeholder headings into new Markdown files.
 
-Example request:
-
-```text
-Create an xxx note directory using this structure, and keep the format consistent with my existing notes.
-```
-
 #### chanson-notes
 
 Distills AI-assisted learning dialogues into high-quality study-note drafts.
@@ -330,16 +300,10 @@ It preserves the learner's original questions because those questions reveal the
 
 Best for:
 
-- Turning ChatGPT, Codex, Claude, or other AI learning conversations into notes.
+- Turning ChatGPT, Codex, Claude Code, or other agent / AI learning conversations into notes.
 - Refining chapter learning records.
 - Preserving examples and reasoning instead of keeping only concepts.
 - Producing a draft that can be handed to `obsidian-skills` for vault insertion.
-
-Example request:
-
-```text
-This is my AI dialogue while studying xxx section x.x. Please refine the knowledge points, preserve the key reasoning process, avoid leaving only bare concepts, and write the refined notes into the corresponding xxx chapter note.
-```
 
 #### chanson-mistakes
 
@@ -366,12 +330,6 @@ Best for:
 - Extracting review priorities from repeated mistakes.
 - Providing source material for `chanson-practice`.
 
-Example request:
-
-```text
-Add these questions to my xxx mistake notebook, chapter x.x.
-```
-
 #### chanson-practice
 
 Generates targeted practice questions from notes, mistake notebooks, weak points, or selected chapters.
@@ -394,12 +352,6 @@ Difficulty levels:
 - Hard: multi-step reasoning, traps, combined knowledge points.
 - Past-paper level: close to the style and difficulty of the user's target exam, assessment, or training material.
 - Advanced: transfer questions for stronger mastery.
-
-Example request:
-
-```text
-Based on my xxx section x.x notes and mistake notebook, generate 10 medium-difficulty multiple-choice questions with answers and explanations.
-```
 
 ### Recommended Workflow
 
@@ -455,6 +407,6 @@ Let obsidian-skills write the practice set into the practice folder
 ### Who This Is For
 
 - Learners who maintain long-term study systems in Obsidian.
-- Codex users who want structured notes, mistake notebooks, and practice sets.
+- Codex, Claude Code, and other agent users who want structured notes, mistake notebooks, and practice sets.
 - Learners preparing for any long-cycle course, assessment, exam, certification, or skill-training goal.
 - Anyone who wants to turn AI learning conversations into stable knowledge assets.

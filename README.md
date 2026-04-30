@@ -1,4 +1,4 @@
-# Chanson Skills Library
+# chanson-obsidian-skills
 
 <p align="center">
   <a href="#中文说明">中文</a> |
@@ -7,7 +7,7 @@
 
 ## 中文说明
 
-Chanson Skills Library 是一组面向学习复盘、Obsidian 知识库和 Codex 工作流的技能集合。它的目标不是简单总结聊天记录，而是把学习过程中的提问、困惑、错因、推理过程和复习价值沉淀成可长期维护的学习材料。
+`chanson-obsidian-skills` 是一组面向学习复盘、Obsidian 知识库和 Codex 工作流的技能集合。它的目标不是简单总结聊天记录，而是把学习过程中的提问、困惑、错因、推理过程和复习价值沉淀成可长期维护的学习材料。
 
 本仓库包含 4 个相互独立但可以组合使用的 skills：
 
@@ -235,7 +235,7 @@ obsidian-skills 负责 Obsidian 格式与写入
 
 ## English
 
-Chanson Skills Library is a learning-focused skill set for Codex, Obsidian vaults, study notes, mistake reviews, and targeted practice. It is designed to turn real learning conversations, confusion, wrong answers, and reasoning paths into durable study materials.
+`chanson-obsidian-skills` is a learning-focused skill set for Codex, Obsidian vaults, study notes, mistake reviews, and targeted practice. It is designed to turn real learning conversations, confusion, wrong answers, and reasoning paths into durable study materials.
 
 This repository contains 4 independent skills that can also work together:
 
